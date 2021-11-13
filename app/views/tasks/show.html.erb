@@ -3,3 +3,7 @@
 <p><%= @task.details %></p>
 <p><%= @task.completed %></p>
 <p><%= link_to "HOME", tasks_path %></p>
+<p><%= link_to "EDIT", edit_task_path %></p>
+<p><%= link_to "DELETE #{@task.title}",
+task_path(@task),
+method: :delete, data: { confirm: "Are you sure?" } %></p>
